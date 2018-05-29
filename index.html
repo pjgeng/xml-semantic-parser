@@ -2,17 +2,23 @@
 <html>
 <head>
 	<script type="text/javascript" src="./js/vendor/jQuery/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./js/main.js"></script>
 	<script type="text/javascript" src="./js/vendor/david-walshe/xmlTojson.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css" integrity="sha256-rxais37anKUnpL5QzSYte+JnIsmkGmLG+ZhKSkZkwVM=" crossorigin="anonymous" />
 </head>
 <body>
 	<div id="output">
 		<form id="inputform">
 			<input type="file" name="inputfile" id="inputfile" />
+			<select id="quickview" name="qickview" onChange="quickView(this)"></select>
+			<input type="text" name="valuesearch" id="valuesearch" />
 		</form>
+		<div id="results"><span id="label"></span> - <span id="count"></span></div>
 	</div>
-	<textarea id="loaded"></textarea>
+	<!--<textarea id="loaded"></textarea>-->
 	<div id="converted"></div>
 	<div id="parsed"></div>
 	<script type="text/javascript">

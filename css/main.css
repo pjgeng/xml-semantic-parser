@@ -1,0 +1,12 @@
+.closed {
+	display: none;
+}
+#accordion li:not(.value) {
+	cursor: pointer;
+}
+#accordion li.value {
+	cursor: default;
+}
+.value {
+	font-style: italic;
+}
