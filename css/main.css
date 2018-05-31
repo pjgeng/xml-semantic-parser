@@ -10,3 +10,15 @@
 .value {
 	font-style: italic;
 }
+div#uniques span.head {
+	font-weight: 600;
+}
+div#uniques span.value {
+	font-style: italic;
+}
+span.error {
+	color: darkred;
+}
+span.valid {
+	color: darkgreen;
+}

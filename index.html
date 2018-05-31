@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" manifest="/offline.appcache">
 <head>
 	<script type="text/javascript" src="./js/vendor/jQuery/jquery-3.3.1.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./js/vendor/jQuery/jqueryui-1.12.1.min.js"></script>
 	<script type="text/javascript" src="./js/main.js"></script>
 	<script type="text/javascript" src="./js/vendor/david-walshe/xmlTojson.js"></script>
+	<script type="text/javascript" src="./js/vendor/xmllint.js/xmllint.js"></script>
+	<script type="text/javascript" src="./js/vendor/defiant.js/defiant.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css" integrity="sha256-rxais37anKUnpL5QzSYte+JnIsmkGmLG+ZhKSkZkwVM=" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="./css/vendor/jQuery/jqueryui-1.12.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/vendor/jQuery/jqueryui-1.12.1.structure.min.css" />
 </head>
 <body>
 	<div id="output">
 		<form id="inputform">
 			<input type="file" name="inputfile" id="inputfile" />
+			<input type="file" name="testxsd" id="testxsd" accept=".xsd" />
+			<button type="button" name="res" id="res" onClick="resetTree(this)">Reset Tree </button>
 			<select id="quickview" name="qickview" onChange="quickView(this)"></select>
 			<input type="text" name="valuesearch" id="valuesearch" />
 		</form>
-		<div id="results"><span id="label"></span> - <span id="count"></span></div>
+		<div id="results">
+			<span id="label"></span> - <span id="count"></span>
+			<div id="uniques"></div>
+			<div id="validation"></div>
+		</div>
 	</div>
 	<!--<textarea id="loaded"></textarea>-->
 	<div id="converted"></div>

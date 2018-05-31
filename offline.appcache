@@ -1,0 +1,20 @@
+CACHE MANIFEST
+      
+# Version 0.1a
+
+CACHE:
+index.html
+js/main.js
+js/vendor/jQuery/jquery-3.3.1.min.js
+js/vendor/jQuery/jqueryui-1.12.1.min.js
+js/vendor/david-walshe/xmlTojson.js
+js/vendor/xmllint.js/xmllint.js
+css/main.css
+css/vendor/jQuery/jqueryui-1.12.1.min.css
+css/vendor/jQuery/jqueryui-1.12.1.structure.min.css
+
+#FALLBACK:
+#/ /offline.html
+
+NETWORK:
+*
